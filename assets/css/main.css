@@ -1074,6 +1074,7 @@ body.loaded {
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
+	
 }
 
 .hero-image-box img:hover {
