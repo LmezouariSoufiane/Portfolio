@@ -1350,40 +1350,35 @@
                   </div>
                   <div class="approach_content">
                      <p>
-                        <b>Database Design:</b><br>
-                        <b>Requirements:</b> Management of observation data (sites, seasons, species), automation, flexibility, and data integrity.<br>
-                        <b>Conceptual (MCD) and Physical (MPD) Modeling:</b> Relational, normalized, and scalable data.<br>
-                        <b>Key Tables:</b> Bees, plants, samples, sampling methods, researchers, seasons, interactions, nativity.<br>
+                        <b>Data Exploration:</b><br>
+                        Visualization of the time series to identify trends, seasonality, and potential anomalies. Stationarity was tested using the Augmented Dickey-Fuller (ADF) test.<br>
                      </p>
                      <p>
-                        <b>Technical Implementation:</b><br>
-                        <b>SQL Scripts:</b> Creation of tables with type, primary/foreign key, and check constraints.<br>
-                        <b>Smart Queries:</b> 
-                        - Parasitic species,<br>
-                        - Native bees per site,<br>
-                        - Most visited plants by species,<br>
-                        - Activity periods,<br>
-                        - Specific species-location interactions.<br>
-                        <b>Automatic Triggers:</b>
-                        - Duplicate detection,<br>
-                        - Updating cross-references,<br>
-                        - Handling inconsistent values,<br>
-                        - Alerts for excessive sampling duration,<br>
-                        - Detection of non-native bees.<br>
+                        <b>Preprocessing:</b><br>
+                        Series transformation (e.g., differencing), train-test splitting, and seasonal decomposition to prepare the data for modeling.<br>
                      </p>
                      <p>
-                        <b>Advanced Features:</b><br>
-                        <b>Automation:</b> Critical tasks such as:<br>
-                        - Daily report generation (sample count, observed species),<br>
-                        - Default status assignment,<br>
-                        - Monitoring non-native species influx.<br>
+                        <b>Model Implementation:</b><br>
+                        <b>AR (Auto-Regressive):</b> Forecast based on past values.<br>
+                        <b>MA (Moving Average):</b> Forecast based on past forecast errors.<br>
+                        <b>ARIMA:</b> Combines AR and MA, with differencing for trend removal.<br>
+                        <b>SARIMA:</b> Enhances ARIMA with seasonal components to model repeating cycles.<br>
                      </p>
                      <p>
-                        <b>Results and Impact:</b><br>
-                        This project allowed the development of a reliable and scalable relational database, serving not only to store ecological data but also to analyze and extract complex insights. With rigorous modeling, optimized SQL queries, and intelligent triggers, this database is a true tool for research and biodiversity management.
+                        <b>Model Evaluation:</b><br>
+                        Models were assessed using key metrics:<br>
+                        - RMSE (Root Mean Squared Error)<br>
+                        - MAE (Mean Absolute Error)<br>
+                        - AIC/BIC for model selection<br>
+                        Diagnostic checks and residual analysis were used to validate model assumptions.<br>
+                     </p>
+                     <p>
+                        <b>Forecast Visualization:</b><br>
+                        Side-by-side plots of actual vs. predicted values, including confidence intervals, were generated to assess forecast accuracy and reliability.<br>
                      </p>
                   </div>
                </div>
+               
                
                
 
